@@ -1,0 +1,19 @@
+>>>>>>>>>>create table tblstudinfo (prn varchar(20) NOT NULL,lastname varchar(50) NOT NULL,firstname varchar(50) NOT NULL,
+			middlename varchar(50) NOT NULL,rollno int NOT NULL,coursecode varchar(10) NOT NULL,
+			mobno varchar(11) NOT NULL,password varchar(50) NOT NULL,primary key(prn));
+
+
+
+
+
+>>>>>>>>>>create table tblfeedback (studid int(11) NOT NULL,fascility varchar(20) NOT NULL,
+			environment varchar(20) NOT NULL,teaching varchar(20) NOT NULL,curricular varchar(20) NOT NULL,
+			cleaning varchar(20) NOT NULL,water varchar(20) NOT NULL,complaints varchar(20) NOT NULL,
+			wifi varchar(20) NOT NULL,lab varchar(20) NOT NULL,placement varchar(20) NOT NULL,suggestion varchar(50));
+
+
+>>>>>>>>>>ALTER TABLE tblfeedback ADD FOREIGN KEY (prnno) REFERENCES tblstudinfo (prn);
+
+>>>>>>>>>>"INSERT INTO tblStudInfo (prn,lastname,firstname,middlename,rollno,coursecode,mobno,password) " +" Values ('"+prnno+"','"+lname+"','"+fname+"','"+mname+"',"+Integer.parseInt(rno)+",'"+yclass+"','"+mno+"','"+pass+"')";
+
+>>>>>>>>>>INSERT INTO tblStudInfo (prn,lastname,firstname,middlename,rollno,coursecode,mobno,password) Values ('71726802I','PANDIT','AVANTI','MUKUND',252,'COMP 2','7743901213','AVANTI24');
